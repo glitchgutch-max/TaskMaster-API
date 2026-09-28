@@ -7,9 +7,10 @@ RUN npm install --production
 
 COPY src ./src
 
-EXPOSE 8080
+# Hardening: run as the unprivileged built-in "node" user instead of root
+RUN chown -R node:node /app
+USER node
 
-# NOTE: intentionally left running as root (default) for the lab baseline.
-# Remediation step should add a non-root USER directive.
+EXPOSE 8080
 
 CMD ["node", "src/server.js"]
