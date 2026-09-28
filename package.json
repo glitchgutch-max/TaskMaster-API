@@ -1,0 +1,16 @@
+{
+  "name": "taskmaster-api",
+  "version": "1.0.0",
+  "description": "Legacy cloud task service used for SEC 385 DevSecOps lab remediation exercise",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"no tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "4.16.0",
+    "lodash": "4.17.4",
+    "minimist": "0.0.8"
+  },
+  "license": "MIT"
+}
